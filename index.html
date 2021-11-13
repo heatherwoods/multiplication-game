@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiplication Flash Cards</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script src="main.js" type="text/javascript"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+	
+	<!--
+		
+	COLORS
+dark blue #264653
+sea green #2A9D8F
+yellow #E9C46A
+orange #F4A261
+watermelon #E76F51
+dark BG #23282F
+
+	-->
+	
+	<h1>Multiplication Flash Cards</h1>
+	
+	<div class="screen" id="results-screen">
+		<p class="lg-txt" id="good-bad">Great job!</p>
+		<p id="results-p">You entered the correct answer on <strong><span id="score-area">13</span></strong> out of 13 flash cards.</p>
+		<p>&nbsp;</p>
+		<h2 class="md-txt">Please select another fact family.</h2>
+	</div>
+	
+	<div class="screen" id="fact-fam-screen">
+		<p>Ready to become a Multiplication Master?</p>
+		<p>In this game, you can choose a fact family and practice the multiplication facts in that family until you have mastered them all!</p>
+		<h2 class="md-txt">Select a fact family to begin.</h2>
+	</div>
+	<div class="screen" id="fam-btns-screen">
+		<div id="fam-buttons">
+			<button class="famBtns" id="fam-1" value="1"  onClick="famChoice(this)">1</button>
+			<button class="famBtns" id="fam-2" value="2"  onClick="famChoice(this)">2</button>
+			<button class="famBtns" id="fam-3" value="3"  onClick="famChoice(this)">3</button>
+			<button class="famBtns" id="fam-4" value="4"  onClick="famChoice(this)">4</button>
+			<button class="famBtns" id="fam-5" value="5"  onClick="famChoice(this)">5</button>
+			<button class="famBtns" id="fam-6" value="6"  onClick="famChoice(this)">6</button>
+			<button class="famBtns" id="fam-7" value="7"  onClick="famChoice(this)">7</button>
+			<button class="famBtns" id="fam-8" value="8"  onClick="famChoice(this)">8</button>
+			<button class="famBtns" id="fam-9" value="9"  onClick="famChoice(this)">9</button>
+		</div>
+	</div>
+	
+	<div class="screen" id="flash-cards-screen">
+        <div class="container">
+          <div id="card-area">
+            <div id="card">
+              <p id="card-front"><span id="famNum"></span> x <span id="prodNum"></span><span id="flip-card"> = <span id="corr-ans"></span></span></p>
+              </div>
+            </div>
+          <div id="answer-area">
+            <h2 class="md-txt" id="ans-p">Enter your answer in the box below.</h2>
+            <input type="number" id="ans-input" onFocus="clearInput()">
+            <div id="submit-area">
+              <button id="submit" onClick="checkAns()">Check</button>
+            </div>
+			<div id="msg-area">
+				<p id="msg"></p>  
+			</div>
+            <div id="next-area">
+              <button id="next" onClick="nextQ()">Next</button>
+            </div>
+            </div>
+        </div>
+	</div>
+
+	
+</body>
+</html>

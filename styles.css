@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+COLORS
+dark blue #264653
+sea green #2A9D8F
+yellow #E9C46A
+orange #F4A261
+watermelon #E76F51
+dark BG #293241
+
+*/
+
+body {
+    background-color: #23282F;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #FFFFFF;
+	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #E76F51;
+    margin-top: 50px;
+	margin-bottom: 40px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-weight: 200;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+#results-p {
+    font-size: 1.2rem;
+}
+.lg-txt {
+    color: #F4A261;
+    font-size: 2.3rem;
+}
+.md-txt {
+	font-size: 1.5rem;
+	color: #E9C46A;
+	font-weight: normal;
+	padding-top: 20px;
+}
+#score-area {
+    color: #E76F51;
+}
+#msg {
+	text-align: center;
+	font-size: 1.2em;
+	color: #E7D097;
+}
+
+/*-------------- LAYOUT -------------------*/
+.screen {
+	background-color: #264653;
+	width: 100vw;
+}
+.container {
+	display: flex;
+}
+
+#flash-cards-screen {
+	display: none;
+}
+#results-screen {
+    display: none;
+}
+#card-area {
+	margin-top: 40px;
+}
+#answer-area {
+    display: inline;
+}
+#submit-area {
+    display: inline-block;
+    /*margin-left: 18px;*/
+}
+#next-area {
+    text-align: center;
+	display: block;
+}
+#msg-area {
+	height: 50px;
+}
+
+
+/*-------------- FLASH CARDS -------------------*/
+
+#card {
+    background-color: #2A9D8F;
+    width: 60%;
+    height: 150px;
+    display: inline-block;
+}
+#card-front {
+    padding-top: 18px;
+    font-size: 38px;
+}
+#flip-card {
+	display: none;
+}
+
+/*-------------- BUTTONS -------------------*/
+
+.famBtns {
+    width: 40px;
+    height: 40px;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-width: 0px;
+    font-size: 31px;
+}
+
+#fam-0, #fam-4, #fam-8 {
+    background-color: #E76F51;
+}
+#fam-0:hover, #fam-4:hover, #fam-8:hover {
+    background-color: #E5846C;
+}
+#fam-1, #fam-5, #fam-9 {
+    background-color: #2A9D8F;
+}
+#fam-1:hover, #fam-5:hover, #fam-9:hover {
+    background-color: #4CB4A7;
+}
+#fam-2, #fam-6 {
+    background-color: #F4A261;
+}
+#fam-2:hover, #fam-6:hover {
+    background-color: #EBB184;
+}
+#fam-3, #fam-7 {
+    background-color: #E9C46A;
+}
+#fam-3:hover, #fam-7:hover {
+    background-color: #ECD7A3;
+}
+
+#submit {
+    display: inline-block;
+    float: right;
+    background-color: #F4A261;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #F4BA8C;
+}
+#submit:hover {
+    background-color: #E98D46;
+    border: 2px solid #ED8F46;
+}
+#next {
+	visibility: hidden;
+    margin-left: 80%;
+    margin-right: 20%;
+    text-align: center;
+    background-color: #E76F51;
+    width: 70px;
+    height: 36px;
+    border: 2px solid #EF8D75;
+    -webkit-box-shadow: 2px 2px 13px #1E3138;
+    box-shadow: 2px 2px 13px #1E3138;
+    border-radius: 6px;
+    font-size: 15px;
+}
+#next:hover {
+    background-color: #C4614A;
+    border: 2px solid #D36C52;
+}
+
+
+/*-------------- INPUT -------------------*/
+
+#ans-input {
+    display: inline-block;
+    width: 70px;
+    height: 60px;
+    border-radius: 5px;
+    border-width: 0px;
+    background-color: #F1DAA2;
+    margin-left: 5%;
+    margin-right: 5%;
+	
+	
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+	font-size: 50px;
+	margin: 0;
+}
+
+
+
+/*-------------- MEDIA QUERIES -------------------*/
+
+@media screen and (max-width:600px){
+	#card {
+		height: 150px;
+		margin-left: 0px;
+	}
+	.famBtns {
+		margin-top: 7px;
+	}
+	#fam-btns-screen {
+		margin-top: -100px;
+	}
+	.screen {
+		width: 100vw;
+		padding-top: 10px;
+		padding-bottom: 100px;
+	}
+	#submit {
+    	padding: .4em;
+		font-size: 18px;
+	}
+	#next {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#card-area {
+    	width: 100%;
+	}
+	#answer-area {
+		width: 100%;
+	}
+	h1 {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width:600px){
+	.screen {
+		max-width: 700px;
+		margin: 20px auto 50px auto;
+    	padding: 50px 50px 70px 50px;
+	}
+
+	#fam-btns-screen {
+    margin-top: -162px;		
+	}
+#card-area {
+	width: 50%;
+}
+#answer-area {
+    width: 50%;
+	max-width: 52%;
+    padding-right: 20px;
+    padding-left: 30px;
+    text-align: left;
+}
+#card {
+    background-color: #2A9D8F;
+    height: 150px;
+    width: 250px;
+}
+#ans-p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
